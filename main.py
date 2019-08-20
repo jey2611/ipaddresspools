@@ -10,6 +10,7 @@ with open('CWLocalPoolCountandVPNName.txt','r') as VPNpoolName:
 
         for c in VPNpoolName:
             fields = c.split(',')
+           
             if fields[1]='':
                 increment = 1 
             else
