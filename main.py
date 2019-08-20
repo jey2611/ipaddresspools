@@ -10,9 +10,14 @@ with open('CWLocalPoolCountandVPNName.txt','r') as VPNpoolName:
 
         for c in VPNpoolName:
             fields = c.split(',')
-            increment = int(fields[1])
+            if fields[1]='':
+                increment = 1 
+            else
+                increment = int(fields[1])
+                
             vpnname = fields[0]
-        #check for Integer when null
+     
+
             if increment is not None:
                 firstip = ipaddress.ip_address(iprange)
                 lastip = ipaddress.ip_address(iprange) + increment
